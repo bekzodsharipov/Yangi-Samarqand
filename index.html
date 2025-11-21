@@ -78,51 +78,9 @@
     </div>
   </div>
 
-
-  <div id="registrationModal" class="homeModal" style="display: none">
-    <div class="homeModalOverlay"></div>
-    <div class="homeFormContainer">
-      <button class="closeButton" id="closeModalBtn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 12" fill="none">
-          <path d="M1 11L11 1M1 1.00001L11 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-        </svg>
-      </button>
-      <div class="homeFormTop">
-        <h1 class="homeFormTopTitle">
-          Bepul darsga <br />
-          RO'YXATDAN O'TISH
-        </h1>
-      </div>
-      <form id="registrationForm" name="contact-form">
-        <div class="HomeFormRow">
-          <label class="HomeFormRowLabel" for="phone">Telefon raqamingiz:</label>
-          <div class="phone-input-container">
-            <div class="country-selector">
-              <div class="selected-country" id="selectedCountry">
-                <span id="selectedCountryCode">+998</span>
-                <svg id="dropdownIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </div>
-              <div class="country-dropdown" id="countryDropdown" style="display: none"></div>
-            </div>
-            <input class="HomeFormRowInput" type="tel" id="phone" name="phone" placeholder="88 888 88 88"
-              autocomplete="tel" />
-          </div>
-          <p class="homeFormErrorText" id="phoneError" style="display: none">
-            ❌ Telefon raqam mos emas!
-          </p>
-        </div>
-        <button type="submit" class="HomeFormBtn" id="submitBtn">
-          ro'yxatdan o'tish </button>
-      </form>
-    </div>
-  </div>
-
   <script defer>
-    let totalSeconds = 60; const timerElement = document.getElementById("timer"); const countdown = setInterval(() => { if (totalSeconds <= 0) { clearInterval(countdown); return; } totalSeconds--; let minutes = Math.floor(totalSeconds / 60); let seconds = totalSeconds % 60; let formattedMinutes = minutes.toString().padStart(1, "0"); let formattedSeconds = seconds.toString().padStart(2, "0"); timerElement.textContent = `0${formattedMinutes}:${formattedSeconds}`; }, 1000); const img = document.querySelector(".blur-up"); const bigSrc = img.getAttribute("data-src"); const highRes = new Image(); highRes.src = bigSrc; highRes.onload = () => { img.src = bigSrc; img.classList.add("loaded"); }; 
-  </script>
+   let total = 60; const t = document.getElementById("timer"); const upd = () => { const m = (total / 60) | 0; const s = (total % 60).toString().padStart(2, "0"); t.textContent = `0${m}:${s}`; }; upd(); const i = setInterval(() => { if (total-- <= 0) return clearInterval(i); upd(); }, 1000); // Blur-up image loader const img = document.querySelector(".blur-up"); const bigSrc = img.getAttribute("data-src"); const highRes = new Image(); highRes.src = bigSrc; highRes.onload = function () { img.src = bigSrc; img.classList.add("loaded"); };
+     </script>
 
   <script defer src="/js/app.js"></script>
 </body>
