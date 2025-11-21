@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qurilish</title>
+  <style>
+* { padding: 0; margin: 0; box-sizing: border-box; } html { overflow-x: hidden; } body { font-family: sans-serif; background-color: #F2F2F2; } .header { background-color: #25845C; border: 1px solid #0D7449; border-radius: 0 0 24px 24px; width: 100%; display: flex; align-items: center; justify-content: center; padding: 16px 0px 21px; margin-bottom: 16px; } .header__date { font-family: Poppins, sans-serif; font-weight: 500; font-size: 14px; line-height: 16px; color: white; flex-shrink: 0; padding: 5px 10px; border: 1px solid #FFFFFF; border-radius: 20px; display: flex; align-items: center; } .hero__title { font-family: Kuunari, sans-serif; text-transform: uppercase; font-size: clamp(20px, 6vw, 24px); line-height: 120%; margin-left: auto; margin-right: auto; position: relative; z-index: 20; padding-left: 10px; padding-right: 10px; text-align: center; margin-bottom: 2px; } .hero__title span { color: #0D7449; } .hero__container { max-width: 390px; width: 100%; margin-left: auto; margin-right: auto; display: flex; align-items: center; flex-direction: column; position: relative; justify-content: center; padding-top: 0; } .hero__btn-box { max-width: 430px; width: 100%; } .hero__registerBtn { font-family: Kuunari, sans-serif; text-decoration: none; display: flex; align-items: center; justify-content: center; max-width: 341px; width: 100%; background-color: #0D7449; box-shadow: 0px -6px 14px 0px #FFFFFF26 inset; box-shadow: 0px 4px 0px 0px #005733; border-radius: 21px; font-weight: 700; font-size: 30px; line-height: 35px; color: #fff; text-align: center; padding: 19.5px 20px; height: 74px; margin-bottom: 15px; border: none; overflow: none; text-transform: uppercase; display: flex; margin-left: auto; margin-right: auto; align-items: center; } .description { padding-bottom: 16px; } .description__container { max-width: 349px; margin: 0 auto; padding: 0 20px; } .description__title { font-family: Montserrat, sans-serif; font-weight: 500; font-size: 16px; line-height: 140%; text-align: center; margin-bottom: 28px; } .description__row { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 24px; margin-bottom: 30px; } .description__col { border: 1px solid #0D7449; border-radius: 8px; padding: 20px 17.5px 16px 17.5px; max-width: 309px; width: 100%; } .description__col:nth-child(2) { padding: 20px 15.5px 16px 15.5px; } .description__col:nth-child(3) { padding: 20px 24px 16px 24px; } .description__col-number { background-color: #0D7449; border: 1px solid #0D7449; border-radius: 8px; font-family: Poppins, sans-serif; font-weight: 500; font-size: 14px; line-height: 23.25px; text-align: center; color: white; max-width: 28px; margin-left: auto; margin-right: auto; margin-top: -35px; margin-bottom: 6px; } .description__col-text { font-family: Montserrat, sans-serif; font-weight: 400; font-size: 14px; line-height: 140%; text-align: center; } .description__col-text>span { font-weight: 600; } .description__btns { padding: 0 10px; } @media (min-width: 1085px) { .only_mobile { display: none; } } .only_desktop>br { display: none; } #timer { font-family: Kuunari, sans-serif; font-weight: 400; margin-top: 5px; margin-bottom: 9px; font-size: 34px; line-height: 120%; text-align: center; text-transform: uppercase; color: #000; } .hero__left_bottom { display: flex; flex-direction: column-reverse; position: relative; z-index: 30; padding-left: 10px; padding-right: 10px; width: 100%; } .speakerImg { margin-bottom: 15px; max-width: 314px; width: 100%; height: 314px; object-fit: contain; position: relative; z-index: 20; margin-bottom: -1px; } .hero__center { width: 100%; position: relative; text-align: left; display: flex; flex-direction: column; align-items: center; } @media (max-width: 370px) { .hero__registerBtn { font-size: 28px; } .speakerImg { max-width: 275px; margin-bottom: -21px; } .description__col-text { font-size: 13px; } .description__col { padding: 15px 15.5px; } } .blur-up { filter: blur(10px); transition: filter 0.4s ease-out; } .blur-up.loaded { filter: blur(0); }
+  </style>
+  <link rel="stylesheet" href="./css/modal.css" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="./css/modal.css" />
+  </noscript>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero__container">
+      <div class="header">
+        <p class="header__date">
+          21-Noyabr 20:30da
+        </p>
+      </div>
+      <h1 class="hero__title">
+        <span>Samarqand shahri markazidan oyiga</span> 3.5 mlndan to’lab, 60 oyga bo’lib to’lashga xonadon oling
+      </h1>
+
+      <div class="hero__center">
+        <img src="./images/speakerMini.avif" data-src="./images/speaker.avif" alt="Invertor rasmi" decoding="async"
+          loading="lazy" class="blur-up speakerImg minifyImg" width="314" height="314">
+      </div>
+
+      <div class="hero__left_bottom">
+        <div class="hero__btn-box">
+          <a href="#" class="hero__registerBtn registerBtn">
+            Ro’yxatdan o’tish
+          </a>
+        </div>
+      </div>
+
+      <div id="timer" aria-live="polite">2:00</div>
+    </div>
+  </section>
+
+  <div class="description">
+    <div class="description__container">
+      <h2 class="description__title">Samarqanddagi MEGA AKSIYADA siz:</h2>
+      <div class="description__row">
+        <div class="description__col">
+          <h3 class="description__col-number">01</h3>
+          <p class="description__col-text">
+            <span> 60 oyga foizsiz,</span> penyalarsiz va <br> kafillarsiz, birgina pasport bilan <br> xonadon xarid
+            qilishingiz
+            mumkin
+          </p>
+        </div>
+        <div class="description__col">
+          <h3 class="description__col-number">02</h3>
+          <p class="description__col-text">
+            <span>Samarqand shahar markazidagi</span> <br> barcha qulayliklarga ega loyihadan <br> xonadon tanlash
+            imkoniyatini
+            qo‘lga <br> kiritasiz
+          </p>
+        </div>
+        <div class="description__col">
+          <h3 class="description__col-number">03</h3>
+          <p class="description__col-text">
+            <span>BEPUL 1 ta Cobalt</span> avtomobilini yutib <br> olish imkoniyatiga ega bo‘lasiz
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="description__btns">
+      <a href="#" class="hero__registerBtn registerBtn">
+        Ro’yxatdan o’tish
+      </a>
+    </div>
+  </div>
+
+
+  <div id="registrationModal" class="homeModal" style="display: none">
+    <div class="homeModalOverlay"></div>
+    <div class="homeFormContainer">
+      <button class="closeButton" id="closeModalBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 12" fill="none">
+          <path d="M1 11L11 1M1 1.00001L11 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="homeFormTop">
+        <h1 class="homeFormTopTitle">
+          Bepul darsga <br />
+          RO'YXATDAN O'TISH
+        </h1>
+      </div>
+      <form id="registrationForm" name="contact-form">
+        <div class="HomeFormRow">
+          <label class="HomeFormRowLabel" for="phone">Telefon raqamingiz:</label>
+          <div class="phone-input-container">
+            <div class="country-selector">
+              <div class="selected-country" id="selectedCountry">
+                <span id="selectedCountryCode">+998</span>
+                <svg id="dropdownIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <div class="country-dropdown" id="countryDropdown" style="display: none"></div>
+            </div>
+            <input class="HomeFormRowInput" type="tel" id="phone" name="phone" placeholder="88 888 88 88"
+              autocomplete="tel" />
+          </div>
+          <p class="homeFormErrorText" id="phoneError" style="display: none">
+            ❌ Telefon raqam mos emas!
+          </p>
+        </div>
+        <button type="submit" class="HomeFormBtn" id="submitBtn">
+          ro'yxatdan o'tish </button>
+      </form>
+    </div>
+  </div>
+
+  <script defer>
+    let totalSeconds = 60; const timerElement = document.getElementById("timer"); const countdown = setInterval(() => { if (totalSeconds <= 0) { clearInterval(countdown); return; } totalSeconds--; let minutes = Math.floor(totalSeconds / 60); let seconds = totalSeconds % 60; let formattedMinutes = minutes.toString().padStart(1, "0"); let formattedSeconds = seconds.toString().padStart(2, "0"); timerElement.textContent = `0${formattedMinutes}:${formattedSeconds}`; }, 1000); const img = document.querySelector(".blur-up"); const bigSrc = img.getAttribute("data-src"); const highRes = new Image(); highRes.src = bigSrc; highRes.onload = () => { img.src = bigSrc; img.classList.add("loaded"); }; 
+  </script>
+
+  <script defer src="/js/app.js"></script>
+</body>
+
+</html>
