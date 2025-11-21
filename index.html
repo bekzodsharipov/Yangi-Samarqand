@@ -79,9 +79,8 @@
   </div>
 
   <script defer>
-   let total = 60; const t = document.getElementById("timer"); const upd = () => { const m = (total / 60) | 0; const s = (total % 60).toString().padStart(2, "0"); t.textContent = `0${m}:${s}`; }; upd(); const i = setInterval(() => { if (total-- <= 0) return clearInterval(i); upd(); }, 1000); // Blur-up image loader const img = document.querySelector(".blur-up"); const bigSrc = img.getAttribute("data-src"); const highRes = new Image(); highRes.src = bigSrc; highRes.onload = function () { img.src = bigSrc; img.classList.add("loaded"); };
-     </script>
-
+    let totalSeconds = 60; const timerElement = document.getElementById("timer"); function updateTimer() { const minutes = Math.floor(totalSeconds / 60); const seconds = totalSeconds % 60; timerElement.textContent = '0' + minutes + ':' + seconds.toString().padStart(2, '0'); } updateTimer(); const countdown = setInterval(function () { totalSeconds--; if (totalSeconds < 0) { clearInterval(countdown); return; } updateTimer(); }, 1000); const img = document.querySelector(".blur-up"); const bigSrc = img.getAttribute("data-src"); const highRes = new Image(); highRes.src = bigSrc; highRes.onload = function () { img.src = bigSrc; img.classList.add("loaded"); };
+  </script>
   <script defer src="/js/app.js"></script>
 </body>
 
